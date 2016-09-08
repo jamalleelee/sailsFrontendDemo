@@ -1,69 +1,70 @@
 <ol class="breadcrumb">
-    <li><a href="/">Home</a></li>
-    <li class="active">Add Employee</a></li>
+  <li><a href="/">Home</a></li>
+  <li class="active">Add Viddy Game</a>
+  </li>
 </ol>
 
 <br/>
 <%- partial ('partials/statusmessage.ejs') %>
 
-<h2>Add Employee</h2>
-<form action="/create" method="POST" class="form-horizontal">
-  <div class="form-group">
-    <label for="firstName" class="col-sm-2 control-label">First Name</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+  <h2>Add Viddy Game</h2>
+  <form action="/create" method="POST" class="form-horizontal">
+    <div class="form-group">
+      <label for="gameTitle" class="col-sm-2 control-label">Game Title</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="gameTitle" name="gameTitle" placeholder="Game Title">
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="lastName" class="col-sm-2 control-label">First Name</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="lastName" name="lastName"  placeholder="Last Name">
+    <div class="form-group">
+      <label for="gameGenre" class="col-sm-2 control-label">Game Genre</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="gameGenre" name="gameGenre" placeholder="Game Genre">
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="email" class="col-sm-2 control-label">Email Address</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="email" name="email" placeholder="user@example.com">
+    <div class="form-group">
+      <label for="gameConsole" class="col-sm-2 control-label">Game Console</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="gameConsole" name="gameConsole" placeholder="Game Console">
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="homePhone" class="col-sm-2 control-label">Home Phone</label>
-    <div class="col-sm-10">
-      <input type="phone" class="form-control" id="homePhone" name="homePhone" placeholder="###-###-####">
+    <div class="form-group">
+      <label for="gameDeveloper" class="col-sm-2 control-label">Game Developer</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="gameDeveloper" name="gameDeveloper" placeholder="Optional">
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="cellPhone" class="col-sm-2 control-label">Cell Phone</label>
-    <div class="col-sm-10">
-      <input type="phone" class="form-control" id="cellPhone" name="cellPhone" placeholder="###-###-####">
+    <div class="form-group">
+      <label for="gamePublisher" class="col-sm-2 control-label">Game Publisher</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="gamePublisher" name="gamePublisher" placeholder="Optional">
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="password" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="password" name="password" aria-describedby="helpBlock">
-      <span id="helpBlock" class="help-block">Password at least 8 characters, 1 upppercase, 1 lowercase, and one number</span>
+    <div class="form-group">
+      <label for="gameReleaseDate" class="col-sm-2 control-label">Game ReleaseDate</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="gameReleaseDate" name="gameReleaseDate" placeholder="Optional" aria-describedby="helpBlock">
+        <span id="helpBlock" class="help-block">Must be in MM-DD-YYYY format.</span>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <div class="radio">
-        <label>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="radio">
+          <label>
           <input type="radio" name="active" id="active1" value="1" checked>
           Active
         </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="active" id="active2" value="0">
+        </div>
+        <div class="radio disabled">
+          <label>
+          <input type="radio" name="active" id="active2" value="0" disabled>
           Inactive
         </label>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Add Employee</button>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Add Viddy Game!</button>
+      </div>
     </div>
-  </div>
-</form>
+  </form>

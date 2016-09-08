@@ -1,42 +1,57 @@
 <ol class="breadcrumb">
-    <li class="active">Home</a></li>
+  <li class="active">Home</a>
+  </li>
 </ol>
 
 <br/>
 
 <%- partial ('partials/statusmessage.ejs') %>
 
-<h2>Employees</h2>
-<table class="table table-striped table-bordered">
-  <tr>
-    <th>ID</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email</th>
-    <th>Home Phone</th>
-    <th>Cell Phone</th>
-    <th>Password</th>
-    <th>Active</th>
-  </tr>
-  <% if(typeof employees != "undefined" && employees.length > 0){ %>
-    <% employees.forEach(function(employee){ %>
-      <tr>
-        <td><%= employee.id %></td>
-        <td><%= employee.firstName %></td>
-        <td><%= employee.lastName %></td>
-        <td><%= employee.email %></td>
-        <td><%= employee.homePhone %></td>
-        <td><%= employee.cellPhone %></td>
-        <td><%= employee.password %></td>
-        <td><%= employee.active %></td>
-      </tr>
-    <% }) %>
-  <% }else{ %>
-      <tr>
-        <td colspan="8">0 records found</td>
-      </tr>
-  <% } %>
-  
-</table>
+  <h2>Employees</h2>
+  <table class="table table-striped table-bordered">
+    <tr>
+      <th>Game ID</th>
+      <th>Game Title</th>
+      <th>Game Genre</th>
+      <th>Game Console</th>
+      <th>Game Developer</th>
+      <th>Game Publisher</th>
+      <th>Release Date</th>
+      <th>Active</th>
+    </tr>
+    <% if(typeof viddygames != "undefined" && viddygames.length > 0){ %>
+      <% viddygames.forEach(function(viddygame){ %>
+        <tr>
+          <td>
+            <%= viddygame.id %>
+          </td>
+          <td>
+            <%= viddygame.gameTitle %>
+          </td>
+          <td>
+            <%= viddygame.gameGenre %>
+          </td>
+          <td>
+            <%= viddygame.gameConsole %>
+          </td>
+          <td>
+            <%= viddygame.gameDeveloper %>
+          </td>
+          <td>
+            <%= viddygame.gamePublisher %>
+          </td>
+          <td>
+            <%= viddygame.gameReleaseDate %>
+          </td>
+          <td>
+            <%= viddygame.active %>
+          </td>
+        </tr>
+        <% }) %>
+          <% }else{ %>
+            <tr>
+              <td colspan="8">0 records found</td>
+            </tr>
+            <% } %>
 
-
+  </table>

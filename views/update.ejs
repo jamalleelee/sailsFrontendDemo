@@ -9,12 +9,16 @@
 <br/>
 <%- partial ('partials/statusmessage.ejs') %>
 
+<script type="text/javascript">
+var id = prompt("What ID would you like to change?")
+</script>
+
 <h2>Add Viddy Game</h2>
 <form action="/create" method="POST" class="form-horizontal">
 <div class="form-group">
   <label for="gameTitle" class="col-sm-2 control-label">Game Title</label>
   <div class="col-sm-10">
-    <input type="text" class="form-control" id="gameTitle" name="gameTitle" placeholder="Game Title">
+    <input type="text" class="form-control" id="gameTitle" name="gameTitle" placeholder="Game Title" value="hi">
   </div>
 </div>
 <div class="form-group">
